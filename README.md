@@ -111,9 +111,16 @@ mvn clean package -DskipTests
 
 #### 4️⃣ **Execute o Projeto no VS Code**:
 
-Se você está utilizando o VS Code para o desenvolvimento, siga esses passos para rodar o projeto com facilidade:
+Siga um desses passos para rodar o projeto com facilidade:
 
-1. Instale a Extensão Spring Boot Dashboard
+1. Com estes 2 scripts sh, vai ser feito o deploy e rodar o projeto. 
+Execute o comando a baixo no terminal:
+
+```bash
+./deploy.sh && ./run.sh   
+```
+
+2. Instale a Extensão Spring Boot Dashboard
 
    - Abra o VS Code.
 
@@ -123,11 +130,11 @@ Se você está utilizando o VS Code para o desenvolvimento, siga esses passos pa
 
 **Isso adicionará suporte para rodar e depurar facilmente sua aplicação Spring Boot no VS Code.**
 
-2. Abra o Projeto no VS Code
+3. Abra o Projeto no VS Code
 
    - Certifique-se de ter aberto a pasta do projeto no VS Code.
 
-3. Rodando o Projeto
+4. Rodando o Projeto
 
   Após a instalação da extensão Spring Boot Dashboard:
 
@@ -312,6 +319,10 @@ Content-Type: application/json
 PRIMEIRA_LISTA/
 ├── .mvn/
 ├── .vscode/
+│   ├── launch.json
+│   └── settings.json
+├── docker
+│   └── Dockerfile
 ├── src/
 │   ├── main/
 │   │   ├── java/
@@ -343,12 +354,17 @@ PRIMEIRA_LISTA/
 │                   └── primeiro/
 │                       └── PrimeiroApplicationTests.java
 ├── target/
+├── .env
+├── .env.example
 ├── .gitattributes
 ├── .gitignore
+├── deploy.sh
+├── docker-compose.yml
 ├── mvnw
 ├── mvnw.cmd
 ├── pom.xml
-└── README.md
+├── README.md
+└── run.sh
 ```
 
 # Configurações do Projeto
