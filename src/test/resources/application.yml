@@ -1,21 +1,10 @@
-spring.application.name: primeiro
-spring.servlet.multipart.max-file-size: 10MB
-
-spring.datasource.driver-class-name: org.postgresql.Driver
-spring.datasource.url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
-spring.datasource.username: ${POSTGRES_USER}
-spring.datasource.password: ${POSTGRES_PASSWORD}
-
-# Configurações do JPA/Hibernate
-spring.jpa.database: postgresql
-spring.jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect
-spring.jpa.hibernate.ddl-auto: update
-spring.jpa.show-sql: true
-
-# Configuração do servidor
-server.port: ${APP_PORT:9000}
-server.servlet.context-path: ${PATH_PREFIX:/}
-server.compression.enabled: true
-server.ssl.enabled: false
-
-app.security.allowed-origin-patterns: ${ALLOWED_ORIGINS_PATTERN:http://localhost:3000}
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
