@@ -41,11 +41,11 @@ cd nome-do-repositorio
 #### 1️⃣ 📌 Pré-requisitos
 Antes de iniciar, certifique-se de que possui os seguintes softwares instalados:
 
-✅ Java 21 Verifique com o comando java -version.
-✅ Maven (mvn -v para verificar)
-✅ PostgreSQL (psql --version para verifica)
-✅ Visual Studio Code (VS Code)
-✅ Extensões recomendadas no VS Code:
+- ✅ Java 21 Verifique com o comando java -version.
+- ✅ Maven (mvn -v para verificar)
+- ✅ PostgreSQL (psql --version para verifica)
+- ✅ Visual Studio Code (VS Code)
+- ✅ Extensões recomendadas no VS Code:
 Spring Boot Tools (para integração com o Spring Boot)
 Java Extension Pack (inclui várias ferramentas úteis para Java, como o Language Support for Java)
 
@@ -113,9 +113,16 @@ mvn clean package -DskipTests
 
 #### 4️⃣ **Execute o Projeto no VS Code**:
 
-Se você está utilizando o VS Code para o desenvolvimento, siga esses passos para rodar o projeto com facilidade:
+Siga um desses passos para rodar o projeto com facilidade:
 
-1. Instale a Extensão Spring Boot Dashboard
+1. Com estes 2 scripts sh, vai ser feito o deploy e rodar o projeto. 
+Execute o comando a baixo no terminal:
+
+```bash
+./deploy.sh && ./run.sh   
+```
+
+2. Instale a Extensão Spring Boot Dashboard
 
    - Abra o VS Code.
 
@@ -125,11 +132,11 @@ Se você está utilizando o VS Code para o desenvolvimento, siga esses passos pa
 
 **Isso adicionará suporte para rodar e depurar facilmente sua aplicação Spring Boot no VS Code.**
 
-2. Abra o Projeto no VS Code
+3. Abra o Projeto no VS Code
 
    - Certifique-se de ter aberto a pasta do projeto no VS Code.
 
-3. Rodando o Projeto
+4. Rodando o Projeto
 
   Após a instalação da extensão Spring Boot Dashboard:
 
@@ -156,13 +163,13 @@ Use as credenciais configuradas no application.properties (usuário sa, senha pa
 
 ### 📌 Pré-requisitos
 
-✅ Java 21: Verifique com o comando java -version.
-✅ Maven: Verifique com mvn -v.
-✅ Git instalado (opcional, para clonar o repositório).
-✅ Docker e Docker Compose: Verifique com docker --version e docker-compose --version.
-✅ PostgreSQL: Verifique com psql --version.
-✅ Visual Studio Code (VS Code)
-✅ Extensões recomendadas no VS Code:
+- ✅ Java 21: Verifique com o comando java -version.
+- ✅ Maven: Verifique com mvn -v.
+- ✅ Git instalado (opcional, para clonar o repositório).
+- ✅ Docker e Docker Compose: Verifique com docker --version e docker-compose --version.
+- ✅ PostgreSQL: Verifique com psql --version.
+- ✅ Visual Studio Code (VS Code)
+- ✅ Extensões recomendadas no VS Code:
 Spring Boot Tools (para integração com o Spring Boot)
 Java Extension Pack (inclui várias ferramentas úteis para Java, como o Language Support for Java)
 
@@ -314,6 +321,10 @@ Content-Type: application/json
 PRIMEIRA_LISTA/
 ├── .mvn/
 ├── .vscode/
+│   ├── launch.json
+│   └── settings.json
+├── docker
+│   └── Dockerfile
 ├── src/
 │   ├── main/
 │   │   ├── java/
@@ -345,12 +356,17 @@ PRIMEIRA_LISTA/
 │                   └── primeiro/
 │                       └── PrimeiroApplicationTests.java
 ├── target/
+├── .env
+├── .env.example
 ├── .gitattributes
 ├── .gitignore
+├── deploy.sh
+├── docker-compose.yml
 ├── mvnw
 ├── mvnw.cmd
 ├── pom.xml
-└── README.md
+├── README.md
+└── run.sh
 ```
 
 # Configurações do Projeto
