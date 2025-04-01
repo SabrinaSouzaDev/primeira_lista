@@ -84,9 +84,47 @@ Alternativamente, você pode:
    - Usar o Start Debugging (F5).
    - Ou clicar com o botão direito na classe principal (PrimeiroApplication.java) no Explorer e escolher Run Java ou Debug Java.
 
-#### 4. Acesse a API:
+#### 4️⃣ **Execute o Projeto no VS Code**:
 
-Acesse o Swagger UI em http://localhost:8080/swagger-ui.html para testar os endpoints.
+Siga um desses passos para rodar o projeto com facilidade:
+
+1. Com estes 2 scripts sh, vai ser feito o deploy e rodar o projeto. 
+Execute o comando a baixo no terminal:
+
+```bash
+./deploy.sh && ./run.sh   
+```
+
+2. Instale a Extensão Spring Boot Dashboard
+
+   - Abra o VS Code.
+
+   - Vá para a Visualização de Extensões (ícone de quadrado no lado esquerdo) ou use o atalho Ctrl + Shift + X.
+
+   - Pesquise por Spring Boot Dashboard e clique em Instalar.
+
+**Isso adicionará suporte para rodar e depurar facilmente sua aplicação Spring Boot no VS Code.**
+
+3. Abra o Projeto no VS Code
+
+   - Certifique-se de ter aberto a pasta do projeto no VS Code.
+
+4. Rodando o Projeto
+
+  Após a instalação da extensão Spring Boot Dashboard:
+
+   - Clique na Visualização do Spring Boot Dashboard no lado esquerdo (ícone de quadrado com o logotipo do Spring).
+
+   - Você verá sua aplicação listada. Clique em Run para iniciar a aplicação.
+
+Alternativamente, você pode:
+
+   - Usar o Start Debugging (F5).
+   - Ou clicar com o botão direito na classe principal (PrimeiroApplication.java) no Explorer e escolher Run Java ou Debug Java.
+
+##### 5️⃣ **Acesse a API**:
+
+Acesse o Swagger UI em http://localhost:8080/swagger-ui/index.html#/ para testar os endpoints.
 
 <!-- 5. **Banco de Dados H2**:
 
